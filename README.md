@@ -1,1 +1,1 @@
-# clone-jshttp-cookie
+Clone [jshttp/cookie: HTTP server cookie parsing and serialization](https://github.com/jshttp/cookie) for study
