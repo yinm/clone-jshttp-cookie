@@ -4,6 +4,7 @@
   "description": "Clone [jshttp/cookie: HTTP server cookie parsing and serialization](https://github.com/jshttp/cookie) for study",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --plugin markdown --ext js,md .",
     "test": "mocha --reporter spec --bail --check-leaks test/",
     "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/"
@@ -20,6 +21,8 @@
   },
   "homepage": "https://github.com/yinm/clone-jshttp-cookie#readme",
   "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-plugin-markdown": "1.0.0-beta.6",
     "istanbul": "0.4.5",
     "mocha": "1.21.5"
   }
