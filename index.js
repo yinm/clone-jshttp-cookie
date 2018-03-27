@@ -50,9 +50,13 @@ function parse(str, options) {
     pairs = str.split(pairSplitRegExp),
     dec = opt.decode || decode
 
+  console.log(`pairs: ${pairs}`)
+
   for (let i = 0, length = pairs.length; i < length; i++) {
     let pair = pairs[i]
     let equalIndex = pair.indexOf('=')
+
+    console.log(`equalIndex: ${equalIndex}`)
 
     // skip things that don't look like key=value
     if (equalIndex < 0) {
@@ -61,17 +65,27 @@ function parse(str, options) {
 
     let key = pair.substr(0, equalIndex).trim()
     let val = pair.substr(++equalIndex, pair.length).trim()
+    console.log(`++equalIndex: ${equalIndex}`)
+
+    console.log(`key: ${key}`)
+    console.log(`val: ${val}`)
+
+    console.log(`val[0]; ${val[0]}`)
 
     // quoted values
     if ('"' === val[0]) {
       val = val.slice(1, -1)
     }
 
+    console.log(`val after slice: ${val}`)
+
     // only assign once
     if (undefined === obj[key]) {
       obj[key] = tryDecode(val, dec)
     }
   }
+
+  console.log(`--------------------------------------`)
 
   return obj
 }
