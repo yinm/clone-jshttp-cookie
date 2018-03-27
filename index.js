@@ -63,12 +63,12 @@ function parse(str, options) {
     let val = pair.substr(++equalIndex, pair.length).trim()
 
     // quoted values
-    if ('"' == val[0]) {
+    if ('"' === val[0]) {
       val = val.slice(1, -1)
     }
 
     // only assign once
-    if (undefined == obj[key]) {
+    if (undefined === obj[key]) {
       obj[key] = tryDecode(val, dec)
     }
   }
