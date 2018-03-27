@@ -1,0 +1,26 @@
+{
+  "name": "clone-jshttp-cookie",
+  "version": "1.0.0",
+  "description": "Clone [jshttp/cookie: HTTP server cookie parsing and serialization](https://github.com/jshttp/cookie) for study",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yinm/clone-jshttp-cookie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yinm/clone-jshttp-cookie/issues"
+  },
+  "homepage": "https://github.com/yinm/clone-jshttp-cookie#readme",
+  "devDependencies": {
+    "istanbul": "0.4.5",
+    "mocha": "1.21.5"
+  }
+}
