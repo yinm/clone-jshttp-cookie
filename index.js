@@ -114,7 +114,7 @@ function serialize(name, val, options) {
 
   let str = `${name}=${value}`
 
-  if (opt.maxAge) {
+  if (opt.maxAge != null) {
     const maxAge = opt.maxAge - 0
     if (isNaN(maxAge)) {
       throw new Error('maxAge should be a Number')
